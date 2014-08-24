@@ -1,10 +1,12 @@
 #!/usr/bin/env zsh
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $DIR
 
 sudo rsync -vahP \
-  ./local/sites-enabled/* \
+  ../local/sites-enabled/* \
   /etc/nginx/sites-enabled
 
 sudo rsync -vahP \
-  ./local/sites-available/* \
+  ../local/sites-available/* \
   /etc/nginx/sites-available
 
