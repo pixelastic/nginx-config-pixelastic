@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+local target=$1
+if [[ $target == '' ]]; then
+  target='dist';
+fi
+
+sudo rsync -vahP \
+  ./$target/sites-enabled/* \
+  /etc/nginx/sites-enabled
+
+sudo rsync -vahP \
+  ./$target/sites-available/* \
+  /etc/nginx/sites-available
+
