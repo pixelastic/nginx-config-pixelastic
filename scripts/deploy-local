@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+sudo rsync -vahP \
+  ./local/sites-enabled/* \
+  /etc/nginx/sites-enabled
+
+sudo rsync -vahP \
+  ./local/sites-available/* \
+  /etc/nginx/sites-available
+

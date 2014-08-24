@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+sudo rsync -vahP \
+  ./dist/sites-enabled/* \
+  pixelastic:/etc/nginx/sites-enabled
+
+sudo rsync -vahP \
+  ./dist/sites-available/* \
+  pixelastic:/etc/nginx/sites-available
+
